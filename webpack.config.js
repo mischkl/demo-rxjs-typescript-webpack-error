@@ -4,7 +4,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/dist',
-        filename: '[name]-[hash].js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['.js', '.ts']
@@ -13,6 +13,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
+                exclude: /node_modules/,
                 loader: 'ts-loader'
             }
         ]

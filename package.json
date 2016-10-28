@@ -7,15 +7,17 @@
   },
   "author": "Michael Klein <michaelklein27@gmail.com>",
   "devDependencies": {
+    "awesome-typescript-loader": "2.2.4",
     "ts-loader": "0.9.5",
     "typescript": "2.0.6",
-    "webpack": "2.1.0-beta.25"
-  },
-  "dependencies": {
-    "rxjs": "5.0.0-rc.1",
+    "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.9"
   },
+  "dependencies": {
+    "rxjs": "5.0.0-rc.1"
+  },
   "scripts": {
-    "start": "webpack-dev-server"
+    "ts": "webpack-dev-server",
+    "awesome": "webpack-dev-server --config webpack.config.awesome.js"
   }
 }

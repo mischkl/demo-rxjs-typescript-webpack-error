@@ -1,3 +1,3 @@
 exports.doSomething = function doSomething(arg) {
-	console.log(arg);
+	document.body.innerHTML = arg;
 }
