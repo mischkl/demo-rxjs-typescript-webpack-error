@@ -3,7 +3,6 @@ import 'rxjs/add/operator/map';
 import {doSomething} from './doSomething';
 
 const subject: Subject<string> = new Subject<string>();
-subject.subscribe(doSomething);
 
 subject
     .map(arg => arg.toUpperCase())
