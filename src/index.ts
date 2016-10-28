@@ -1,7 +1,13 @@
 import {Subject} from 'rxjs/Subject';
+import 'rxjs/add/operator/map';
 import {doSomething} from './doSomething';
 
 const subject: Subject<string> = new Subject<string>();
 subject.subscribe(doSomething);
-subject.next('Hello RxJS!');
+
+subject
+    .map(arg => arg.toUpperCase())
+    .subscribe(doSomething);
+
+subject.next('hello rxjs!');
 
